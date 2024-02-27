@@ -24,6 +24,38 @@ const EventSchema = new mongoose.Schema({
   rulebook: {
     type: String,
     required: true,
+  },
+  participateCount: {
+    type: Number,
+    required: true,
+  },
+  coordinator: [
+    {
+      name: {
+        type: String,
+        required: true,
+      },
+      contact: {
+        type: String, // Change from Number to String for phone number
+        required: true,
+      },
+    }
+  ],
+  amountfees: {
+    type: Number,
+    required: true,
+  },
+  ownermail: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  eventDescription: {
+    type: String,
+    required: true,
   }
 });
 
