@@ -8,9 +8,7 @@ const sendWhatsAppMessage = async (
   whatsapp_url
 ) => {
   const url = whatsapp_url;
-  const access_token = process.env.WHATSAPP_ACCESS_TOKEN;
-
-  try {
+  const access_token = process.env.WHATSAPP_ACCESS_TOKEN;  try {
     const headers = {
       Authorization: `Bearer ${access_token}`,
       "Content-Type": "application/json",
@@ -37,7 +35,6 @@ const sendWhatsAppMessage = async (
       },
     };
     const response = await axios.post(url, data, { headers });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error);
